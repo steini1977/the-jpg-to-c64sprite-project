@@ -39,10 +39,10 @@
       ::
       cls:rem clears screen to white
       if filename$<>"" then
-        procdisplay(filename$,1,0,240,210):rem show image
-        procdisplay(filename$,0,window_Height%-21,24,21):rem work space
+      procdisplay(filename$,1,0,240,210):rem show image
+      procdisplay(filename$,0,window_Height%-21,24,21):rem work space
       else
-        run
+      run
       endif
       ::rem
       for y=0 to 20
@@ -105,47 +105,47 @@
       next
       proc_menu
       repeat
-        keyb$=inkey$(0)
-        if keyb$<>"" and keyb$<>" " and keyb$<>chr$(13) then
-          for y=0 to 20
-          for x=0 to 11
-          if keyb$="1" and c(x,y)=1 then colour 128+1:m(x,y)=1
-          if keyb$="1" and c(x,y)=2 then colour 128+2:m(x,y)=2
-          if keyb$="1" and c(x,y)=4 then colour 128+4:m(x,y)=4
-          if keyb$="1" and c(x,y)=0 then colour 128+0:m(x,y)=0
-          ::
-          if keyb$="2" and c(x,y)=1 then colour 128+0:m(x,y)=0
-          if keyb$="2" and c(x,y)=2 then colour 128+1:m(x,y)=1
-          if keyb$="2" and c(x,y)=4 then colour 128+2:m(x,y)=2
-          if keyb$="2" and c(x,y)=0 then colour 128+4:m(x,y)=4
-          ::
-          if keyb$="3" and c(x,y)=1 then colour 128+4:m(x,y)=4
-          if keyb$="3" and c(x,y)=2 then colour 128+0:m(x,y)=0
-          if keyb$="3" and c(x,y)=4 then colour 128+1:m(x,y)=1
-          if keyb$="3" and c(x,y)=0 then colour 128+2:m(x,y)=2
-          ::
-          if keyb$="4" and c(x,y)=1 then colour 128+2:m(x,y)=2
-          if keyb$="4" and c(x,y)=2 then colour 128+4:m(x,y)=4
-          if keyb$="4" and c(x,y)=4 then colour 128+0:m(x,y)=0
-          if keyb$="4" and c(x,y)=0 then colour 128+1:m(x,y)=1
-          ::
-          if keyb$="5" and c(x,y)=1 then colour 128+1:m(x,y)=1
-          if keyb$="5" and c(x,y)=2 then colour 128+4:m(x,y)=4
-          if keyb$="5" and c(x,y)=4 then colour 128+2:m(x,y)=2
-          if keyb$="5" and c(x,y)=0 then colour 128+0:m(x,y)=0
-          ::
-          if keyb$="6" and c(x,y)=1 then colour 128+1:m(x,y)=1
-          if keyb$="6" and c(x,y)=2 then colour 128+4:m(x,y)=4
-          if keyb$="6" and c(x,y)=4 then colour 128+0:m(x,y)=0
-          if keyb$="6" and c(x,y)=0 then colour 128+2:m(x,y)=2
-          ::
-          if keyb$="7" and c(x,y)=1 then colour 128+2:m(x,y)=2
-          if keyb$="7" and c(x,y)=2 then colour 128+4:m(x,y)=4
-          if keyb$="7" and c(x,y)=4 then colour 128+1:m(x,y)=1
-          if keyb$="7" and c(x,y)=0 then colour 128+0:m(x,y)=0
-          print tab(40+x*3,5+y);"   ";
-          next:next:
-        endif
+      keyb$=inkey$(0)
+      if keyb$<>"" and keyb$<>" " and keyb$<>chr$(13) then
+      for y=0 to 20
+      for x=0 to 11
+      if keyb$="1" and c(x,y)=1 then colour 128+1:m(x,y)=1
+      if keyb$="1" and c(x,y)=2 then colour 128+2:m(x,y)=2
+      if keyb$="1" and c(x,y)=4 then colour 128+4:m(x,y)=4
+      if keyb$="1" and c(x,y)=0 then colour 128+0:m(x,y)=0
+      ::
+      if keyb$="2" and c(x,y)=1 then colour 128+0:m(x,y)=0
+      if keyb$="2" and c(x,y)=2 then colour 128+1:m(x,y)=1
+      if keyb$="2" and c(x,y)=4 then colour 128+2:m(x,y)=2
+      if keyb$="2" and c(x,y)=0 then colour 128+4:m(x,y)=4
+      ::
+      if keyb$="3" and c(x,y)=1 then colour 128+4:m(x,y)=4
+      if keyb$="3" and c(x,y)=2 then colour 128+0:m(x,y)=0
+      if keyb$="3" and c(x,y)=4 then colour 128+1:m(x,y)=1
+      if keyb$="3" and c(x,y)=0 then colour 128+2:m(x,y)=2
+      ::
+      if keyb$="4" and c(x,y)=1 then colour 128+2:m(x,y)=2
+      if keyb$="4" and c(x,y)=2 then colour 128+4:m(x,y)=4
+      if keyb$="4" and c(x,y)=4 then colour 128+0:m(x,y)=0
+      if keyb$="4" and c(x,y)=0 then colour 128+1:m(x,y)=1
+      ::
+      if keyb$="5" and c(x,y)=1 then colour 128+1:m(x,y)=1
+      if keyb$="5" and c(x,y)=2 then colour 128+4:m(x,y)=4
+      if keyb$="5" and c(x,y)=4 then colour 128+2:m(x,y)=2
+      if keyb$="5" and c(x,y)=0 then colour 128+0:m(x,y)=0
+      ::
+      if keyb$="6" and c(x,y)=1 then colour 128+1:m(x,y)=1
+      if keyb$="6" and c(x,y)=2 then colour 128+4:m(x,y)=4
+      if keyb$="6" and c(x,y)=4 then colour 128+0:m(x,y)=0
+      if keyb$="6" and c(x,y)=0 then colour 128+2:m(x,y)=2
+      ::
+      if keyb$="7" and c(x,y)=1 then colour 128+2:m(x,y)=2
+      if keyb$="7" and c(x,y)=2 then colour 128+4:m(x,y)=4
+      if keyb$="7" and c(x,y)=4 then colour 128+1:m(x,y)=1
+      if keyb$="7" and c(x,y)=0 then colour 128+0:m(x,y)=0
+      print tab(40+x*3,5+y);"   ";
+      next:next:
+      endif
       until keyb$=" " or keyb$=chr$(13)
       if keyb$=" " then run
       colour 128+15
@@ -170,11 +170,15 @@
       if x<8 then print;","; else print
       next x
       next y
-
-
-
-
-
+      print "REM: Q to quit, R to run program again"
+      repeat
+      choice=0
+      keyb$=inkey$(0)
+      if keyb$="q" or keyb$="Q" then choice = 1
+      if keyb$="r" or keyb$="R" then choice = 2
+      until choice > 0
+      if choice = 1 then quit
+      if choice = 2 then run
 
       ::rem
       ::
@@ -211,9 +215,9 @@
       sys `GdiplusStartup`, ^lGDIP%, tSI{}, 0
       sys `GdipLoadImageFromFile`, pic%, ^image%
       if image% = 0 then
-        sys `GdiplusShutdown`, lGDIP%
-        sys "FreeLibrary", gdip%
-        error 90, "Couldn't load " + pic$
+      sys `GdiplusShutdown`, lGDIP%
+      sys "FreeLibrary", gdip%
+      error 90, "Couldn't load " + pic$
       endif
 
       sys `GdipGetImageWidth`, image%, ^ix%
